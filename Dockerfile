@@ -1,13 +1,11 @@
-FROM alpine:3.4
+FROM alpine:3.9
 
-MAINTAINER Carlos Bernárdez "carlos@z4studios.com"
+LABEL MAINTAINER='Harry Lee'
 
 # "--no-cache" is new in Alpine 3.3 and it avoid using
 # "--update + rm -rf /var/cache/apk/*" (to remove cache)
 RUN apk add --no-cache \
-# openssh=7.2_p2-r1 \
   openssh \
-# git=2.8.3-r0
   git
 
 # Key generation on the server
